@@ -1,0 +1,37 @@
+﻿@page
+@model WebApplication1.Pages.Admin.Livres.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Livre</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Livre.nom)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Livre.nom)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Livre.price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Livre.price)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Livre.urlImg)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Livre.urlImg)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Livre.LivreID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
